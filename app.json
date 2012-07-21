@@ -1,0 +1,53 @@
+{
+    "name": "Reference",
+    "indexHtmlPath": "index.html",
+    "url": "http://localhost/apps/Reference/",
+    "js": [
+        {
+            "path": "sdk/sencha-touch-all.js"
+        },
+        {
+            "path": "app.js",
+            "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
+            "update": "delta"
+        }
+    ],
+    "css": [
+        {
+            "path": "resources/css/app.css",
+            "update": "delta"
+        }
+    ],
+    "appCache": {
+        "cache": [
+            "index.html"
+        ],
+        "network": [
+            "*"
+        ],
+        "fallback": []
+    },
+
+    "resources": [
+        "resources/images",
+        "resources/icons",
+        "resources/startup"
+    ],
+    "ignore": [
+        "\.svn$"
+    ],
+    "archivePath": "archive",
+    "buildPaths": {
+        "testing": "build/testing",
+        "production": "build/production",
+        "package": "build/package",
+        "native": "build/native"
+    },
+    "buildOptions": {
+        "product": "touch",
+        "minVersion": 3,
+        "debug": false,
+        "logger": "no"
+    },
+    "id": "2d78cf50-d234-11e1-9c76-83eec1a45917"
+}

@@ -1,0 +1,35 @@
+{
+	"applicationName":"Haneo Chek",
+	"applicationId":"com.haneoapp.reference",
+	"versionString":"1.0",
+	"iconName":"resources/icons/Icon~ipad.png",
+
+	"inputPath":"build/native",
+	"outputPath":"build/",
+	"configuration":"Debug",
+
+	/**
+	 * @cfg {String} platform
+	 * @required
+	 * This is the platform where you will be running your application. Available options are:
+	 *  - iOSSimulator
+	 *  - iOS
+	 *  - Android
+	 *  - AndroidEmulator
+	 */
+	"platform":"iOSSimulator",
+	"deviceType":"Universal",
+
+	"certificatePath":"/path/to/certificate.file",
+	"certificateAlias":"",
+	
+	"sdkPath":"/path/to/android-sdk",
+	"androidAPILevel":"15",
+
+	"orientations": [
+		"portrait",
+		"landscapeLeft",
+		"landscapeRight",
+		"portraitUpsideDown"
+	]
+}

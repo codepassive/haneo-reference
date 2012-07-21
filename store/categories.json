@@ -1,0 +1,17 @@
+[{
+	id: 1,
+	name: 'Song',
+	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est sapien, molestie in venenatis sit amet, mattis nec urna. Fusce dictum tortor at est lacinia pretium.',
+	last_updated: 'August 12, 2012 12:00 AM',
+	cover: null,
+	favorited: false,
+	level: 0
+},{
+	id: 2,
+	name: 'Short Stories',
+	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est sapien, molestie in venenatis sit amet, mattis nec urna. Fusce dictum tortor at est lacinia pretium.',
+	last_updated: 'August 15, 2012 12:00 AM',
+	cover: null,
+	favorited: false,
+	level: 0
+}]
