@@ -3,59 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Reference</title>
+    <script id="microloader" type="text/javascript" src="sdk/cordova-1.9.0.js"></script>
+    <link rel="stylesheet" href="resources/fontawesome/css/font-awesome.css">
     <style type="text/css">
-        html, body { height: 100%; background-color: #1985D0; }
-        #appLoadingIndicator {
-            position: absolute;
-            top: 50%;
-            margin-top: -15px;
-            text-align: center;
-            width: 100%;
-            height: 30px;
-            -webkit-animation-name: appLoadingIndicator;
-            -webkit-animation-duration: 1s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-direction: linear;
-        }
-        #appLoadingIndicator > * {
-            background-color: #FFFFFF;
-            display: inline-block;
-            height: 30px;
-            -webkit-border-radius: 15px;
-            margin: 0 5px;
-            width: 30px;
-            opacity: 0.8;
-        }
-        @-webkit-keyframes appLoadingIndicator{
-            0% {
-                opacity: 0.8
-            }
-            50% {
-                opacity: 0
-            }
-            100% {
-                opacity: 0.8
-            }
-        }
-		.hey1 {
-			background: #333 url('http://cepe11.files.wordpress.com/2011/10/sorry-sorry_003.jpg') no-repeat center scroll;
-			background-size: cover;
-			color: #fff;
-		}
-		.dockbarBottom {
-			background: #333; font-size: 12px;
-			color: #aaa;
-			font-weight: bold;
-			padding: 20px;
-		}
+        html, body { height: 100%; background: #1b1a1b url('resources/images/txture.png') repeat center scroll; cursor: default; }
+
+		#app-logo { background: #fff url('') no-repeat center scroll; }
+		#screen-toolbar { background: #fff; }
+		
+		#reference-screen-main-grid h1 { font-weight: bold; }
+		#reference-screen-main-grid p { font-weight: size: 15px; }
+		
+		.category-screen.light p, .category-screen.light h1 { color: #fff; }
+		.category-screen.light .item_count { background: url('resources/images/book-light.png') no-repeat top right scroll; padding-right: 25px; background-size: 24px; }
+		.category-screen.light .favorite { background: url('resources/images/favorite-light.png') no-repeat top right scroll; width: 24px; background-size: 24px; }
+
+		.category-screen.dark p, .category-screen.dark h1 { color: #333; }		
+		.category-screen.dark .item_count { background: url('resources/images/book-dark.png') no-repeat top right scroll; padding-right: 25px; background-size: 24px; }
+		.category-screen.dark .favorite { background: url('resources/images/favorite-dark.png') no-repeat top right scroll; width: 24px; background-size: 24px;  }
+
     </style>
     <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
 </head>
 <body>
-    <div id="appLoadingIndicator">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+
 </body>
 </html>

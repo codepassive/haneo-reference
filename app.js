@@ -1,16 +1,12 @@
 ﻿Ext.application({
-    models: ["Content", "Category"],
-
-    //controllers: ["main"],
-
     name: 'Reference',
-
-    requires: [
-		'Ext.Msg',
-	],
-
+    requires: ['Ext.Msg'],
+	
+	controllers: ["Main"],
+    models: ["Content", "Category"],
+	stores: [],
     views: ['Main'],
-
+	
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',
@@ -30,102 +26,23 @@
     },
 
     launch: function() {
+		console.log('1. Launching App');
 	
-		// Load Data from Storage
+		// Load Local Data from Storage
 		Reference.store.load(function(records, operation, success) {
+			// We make the main Screen
+			Reference.Screens = Ext.Viewport.add(Ext.create('Reference.view.Main'));
+			console.log('2. Building Main Screen');
+			
 			Ext.Array.each(records, function(record, index) {
-				console.log(record.data);
+				// build screens from the category data
+				// Reference.Screens.addCategoryScreen(record.data, index);
+				
+				// final category was loaded
 				if (index >= records.length - 1) {
-					Ext.fly('appLoadingIndicator').destroy();
+					console.log('3. Showing Main Screen');
 				}
 			});
 		});
-		
-		
-		// Populate Categories
-		
-		
-		
-		// Destroy the Loading Screen
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-        // Destroy the #appLoadingIndicator element
-
-        // Initialize the main view
-        //Reference.screen.Main = Ext.Viewport.add(Ext.create('Reference.view.Main'));
-		/*Reference.screen = Ext.Viewport.add(Ext.create('Ext.Container', {
-			fullscreen: true,
-			items: [
-				{
-					xtype : 'toolbar',
-					docked: 'top',
-					title: 'ㅎHaneo: Chek'
-				},
-				{
-					xtype: 'titlebar',
-					docked: 'bottom',
-					items: [
-						{
-							iconCls: 'settings',
-							iconMask: true,
-							align: 'right'
-						}
-					]
-				}
-			]
-		}));*/
-		/*
-		Ext.Viewport.add({
-			xtype: 'container',
-			docked: 'bottom',
-			cls: 'dockbarBottom',
-			html: 'text'
-		});
-		
-		Ext.Viewport.add({
-			xtype: 'carousel',
-			fullscreen: true,
-			direction: 'horizontal',
-
-			defaults: {
-				styleHtmlContent: true
-			},
-
-			items: [
-				{	
-					cls: 'hey1',
-					html : new Ext.Template('<div style="position:absolute;bottom:0;width:90%;margin-bottom:10%;color:#fff;background:rgba(0,0,0,0.5);"><div style="padding:20px;"><h1 style="color:#fff;font-weight:bold;line-height:120%;">Songs 노래</h1><p style="font-size:110%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est sapien, molestie in venenatis sit amet, mattis nec urna. Fusce dictum tortor at est lacinia pretium.</p></div></div>').apply(),
-					style: 'background-color: #f0f0f0;'
-				},
-				{
-					cls: 'hey2',
-					html : 'Item 2',
-					style: 'background-color: #759E60'
-				},
-				{
-					cls: 'hey3',
-					html : 'Item 3'
-				},
-			]
-		});*/
-		
-		
-		
-		
-		
     },
 });

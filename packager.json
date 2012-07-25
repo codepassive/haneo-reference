@@ -17,13 +17,13 @@
 	 *  - Android
 	 *  - AndroidEmulator
 	 */
-	"platform":"iOSSimulator",
+	"platform":"Android",
 	"deviceType":"Universal",
 
 	"certificatePath":"/path/to/certificate.file",
 	"certificateAlias":"",
 	
-	"sdkPath":"/path/to/android-sdk",
+	"sdkPath":"C:/Program Files (x86)/Android/android-sdk",
 	"androidAPILevel":"15",
 
 	"orientations": [

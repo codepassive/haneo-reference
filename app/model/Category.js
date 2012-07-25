@@ -7,8 +7,10 @@ Ext.define('Reference.model.Category', {
             {name: 'description', type: 'string'},
             {name: 'last_updated', type: 'string'},
             {name: 'cover', type: 'string'},
+            {name: 'items', type: 'int'},
             {name: 'favorited', type: 'boolean', defaultValue: false},
-            {name: 'level', type: 'int', defaultValue: 0}
+            {name: 'level', type: 'int', defaultValue: 0},
+            {name: 'theme', type: 'string'}
         ],
 		hasMany: 'Reference.model.Content'
     }
